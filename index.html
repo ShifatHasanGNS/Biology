@@ -13,9 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" 
+    crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="main.js"></script>
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark" onload="create_table();">
     <!-- HEADER -->
     <header class="header mt-5 mb-5" align="center">
         <h1 class="display-2 title text-warning">
@@ -29,7 +36,7 @@
     <!-- CLASS TABLE -->
     <div class="container mt-3 mb-3">
         <h1 class="text-white">Class Table</h1><br>
-        <div class="table-responsive mt-2 mb-2">
+        <div id="classTable" class="table-responsive mt-2 mb-2">
             <table class="table table-dark table-striped table-bordered table-hover">
                 <thead class="align-middle">
                     <tr>
@@ -42,160 +49,8 @@
                         <th>Suggestion Link</th>
                     </tr>
                 </thead>
-                <tbody class="align-middle">
-                    <tr>
-                        <td>1</td>
-                        <td>March 24, 2021</td>
-                        <td>Zoology-1</td>
-                        <td>Beauty of Animal</td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://www.facebook.com/razibhossainsarkar/videos/3928724720543417/&sa=D&source=editors&ust=1618860561382000&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Class</a>
-                        </td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://drive.google.com/file/d/1om8Ub4fjlEGaeS1qGcaSqAYksdrzGrLD/view?usp%3Dsharing&sa=D&source=editors&ust=1618860561383000&usg=AFQjCNGkkKBgrY82v4ZOVqriTgqeBoMrfQMd1-A49CzDygS1rs22lsZOlg">
-                                Question
-                            </a>
-                        </td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://drive.google.com/file/d/1ENI5gSlmZghCLhttps://www.google.com/url?q=https://drive.google.com/file/d/1ENI5gSlmZghCLdU3e_t55IKpzjBPZYiU/view?fbclid%3DIwAR1hPnUP9cAAJEM94VXJAx2puZL8iGlC8uc2URPVxCdRM067zF5JPj6LINM&sa=D&source=editors&ust=1618860561383000&usg=AFQjCNGtiA4p27FGav7NEmm19NPcL6M4oA">
-                                Suggestion
-                            </a>
-                        </td>
-                    </tr>
+                <tbody id="tableBody" class="align-middle">
 
-                    <tr>
-                        <td>2</td>
-                        <td>April 02, 2021</td>
-                        <td>Zoology-1</td>
-                        <td>Beauty of Animal</td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://www.facebook.com/razibhossainsarkar/videos/3955933811155841/&sa=D&source=editors&ust=1618860561383000&usg=AFQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Class
-                            </a>
-                        </td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://drive.google.com/file/d/1dm0STccb8w7z_evPTvklFPYbg7TvvqLU/view?usp%3Dsharing&sa=D&source=editors&ust=1618860561383000&usg=AFQjCNHYkbD9V_OS90Dsyf9TuH1cTP-7JQ1618860561383000&usg=AFQjCNGkkKBgrY82v4ZOVqriTgqeBoMrfQMd1-A49CzDygS1rs22lsZOlg">
-                                Question
-                            </a>
-                        </td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>April 06, 2021</td>
-                        <td>Zoology-1</td>
-                        <td>Beauty of Animal</td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://www.facebook.com/groups/bhmission2021/permalink/461042991883358/&sa=D&source=editors&ust=1618860561384000&usg=AFQjCNEvAtEeWwKK7O1ZCRI06Mv-ztSeLQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Class
-                            </a>
-                        </td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://drive.google.com/file/d/1uhKYLYf4uOJHKNh4_xAkLheb3CLYS49N/view?usp%3Dsharing&sa=D&source=editors&ust=1618860561385000&usg=AFQjCNEuIlVuxqjq8DoSaf_c0CR5vplC0w860561383000&usg=AFQjCNHYkbD9V_OS90Dsyf9TuH1cTP-7JQ1618860561383000&usg=AFQjCNGkkKBgrY82v4ZOVqriTgqeBoMrfQMd1-A49CzDygS1rs22lsZOlg">
-                                Question
-                            </a>
-                        </td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>April 08, 2021</td>
-                        <td>Zoology-1</td>
-                        <td>Beauty of Animal</td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://www.facebook.com/groups/bhmission2021/permalink/462239418430382/&sa=D&source=editors&ust=1618860561385000&usg=AFQjCNFTCTTXbtYHKK3RBieAypx5S7fPsg&usg=AFQjCNEvAtEeWwKK7O1ZCRI06Mv-ztSeLQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Class
-                            </a>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>5</td>
-                        <td>April 11, 2021</td>
-                        <td>Zoology-1</td>
-                        <td>Beauty of Animal</td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://www.facebook.com/groups/bhmission2021/permalink/464058971581760/&sa=D&source=editors&ust=1618860561386000&usg=AFQjCNFXUQlvt4uOhDeLV8kDVQOCUWdoOQ4000&usg=AFQjCNEvAtEeWwKK7O1ZCRI06Mv-ztSeLQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Class
-                            </a>
-                        </td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://drive.google.com/file/d/1_Xs7ouDLCondRzuL70rI-JPEcr5Tan3Q/view?usp%3Dsharing&sa=D&source=editors&ust=1618860561386000&usg=AFQjCNHL_2iSWhvNGWanvyn-PbNlrr5X2Q1618860561385000&usg=AFQjCNEuIlVuxqjq8DoSaf_c0CR5vplC0w860561383000&usg=AFQjCNHYkbD9V_OS90Dsyf9TuH1cTP-7JQ1618860561383000&usg=AFQjCNGkkKBgrY82v4ZOVqriTgqeBoMrfQMd1-A49CzDygS1rs22lsZOlg">
-                                Question
-                            </a>
-                        </td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>6</td>
-                        <td>April 15, 2021</td>
-                        <td>Zoology-1</td>
-                        <td>Beauty of Animal</td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://www.facebook.com/groups/bhmission2021/permalink/466401861347471/&sa=D&source=editors&ust=1618860561387000&usg=AFQjCNEumJwAerFjIgNEY0IHyYKRLzbQOg5000&usg=AFQjCNFTCTTXbtYHKK3RBieAypx5S7fPsg&usg=AFQjCNEvAtEeWwKK7O1ZCRI06Mv-ztSeLQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Class
-                            </a>
-                        </td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://drive.google.com/drive/u/0/folders/1GbO1exvRtAFPjAyY1N0xb8Yu5Ymw0Gi4&sa=D&source=editors&ust=1618941940550000&usg=AFQjCNG5RosYaCVjy_TLSVArZA_y_oM_Wg&usg=AFQjCNEumJwAerFjIgNEY0IHyYKRLzbQOg5000&usg=AFQjCNFTCTTXbtYHKK3RBieAypx5S7fPsg&usg=AFQjCNEvAtEeWwKK7O1ZCRI06Mv-ztSeLQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Question
-                            </a>
-                        </td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>7</td>
-                        <td>April 18, 2021</td>
-                        <td>Botany-2</td>
-                        <td>Cell Division</td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://www.facebook.com/groups/bhmission2021/permalink/468176504503340/&sa=D&source=editors&ust=1618860561388000&usg=AFQjCNF6c8VSJu-_veKU8s6f30kEf0HMzQ=AFQjCNFTCTTXbtYHKK3RBieAypx5S7fPsg&usg=AFQjCNEvAtEeWwKK7O1ZCRI06Mv-ztSeLQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Class
-                            </a>
-                        </td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://drive.google.com/file/d/1PgnQHqEgLB19w7cWVi3TAkn0KqBp3Tfa/view?usp%3Dsharing&sa=D&source=editors&ust=1618941940551000&usg=AFQjCNEqxgQn5AvaCJJzuU7CbKxLRqXpdQ40551000&usg=AFQjCNEqxgQn5AvaCJJzuU7CbKxLRqXpdQ&usg=AFQjCNG5RosYaCVjy_TLSVArZA_y_oM_Wg&usg=AFQjCNEumJwAerFjIgNEY0IHyYKRLzbQOg5000&usg=AFQjCNFTCTTXbtYHKK3RBieAypx5S7fPsg&usg=AFQjCNEvAtEeWwKK7O1ZCRI06Mv-ztSeLQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Question
-                            </a>
-                        </td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>8</td>
-                        <td>April 20, 2021</td>
-                        <td>Botany-2</td>
-                        <td>Cell Division</td>
-                        <td>
-                            <a
-                                href="https://www.google.com/url?q=https://www.facebook.com/groups/bhmission2021/permalink/469378514383139/&sa=D&source=editors&ust=1618941940552000&usg=AFQjCNEiOWKBOfAwwIG3BopNYZrho8Lfnw6c8VSJu-_veKU8s6f30kEf0HMzQ=AFQjCNFTCTTXbtYHKK3RBieAypx5S7fPsg&usg=AFQjCNEvAtEeWwKK7O1ZCRI06Mv-ztSeLQjCNHFZbkybdk3eWgUUn0Z5Is2f8Q5PQ&usg=AFQjCNFWly1QNZIBX5f95cbyngwGdM6V7w">
-                                Class
-                            </a>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -233,11 +88,5 @@
         <small class="copyright text-white-50 fs-5">&copy; Md. Shifat Hasan</small>
     </div>
 </footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-    crossorigin="anonymous">
-</script>
 
 </html>
