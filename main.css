@@ -48,6 +48,25 @@ footer {
     margin-top: 50px;
 }
 
+ul {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    width: auto;
+}
+
+li.list-group-item {
+    size: 3px;
+    border: none;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    background: transparent;
+    color: white;
+    padding: 2;
+    margin: 2px;
+}
+
 i {
     text-align: center;
     align-self: center;
