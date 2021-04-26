@@ -91,3 +91,9 @@ a:hover {
     text-decoration: none;
     color: chocolate;
 }
+
+hr {
+    height: 1px;
+    width: 50%;
+    margin: auto;
+}
