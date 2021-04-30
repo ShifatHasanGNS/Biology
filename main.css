@@ -29,10 +29,22 @@ body {
 }
 
 table, th, td {
+    border-collapse: collapse;
     align-self: center;
     text-align: center;
     font-family: 'Noto Sans JP', sans-serif;
     width: auto;
+}
+
+th {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: #ffc107;
+}
+
+.exam {
+    font-weight: bold;
+    color: #ffc107;
 }
 
 footer {
@@ -76,11 +88,12 @@ i {
 }
 
 a {
+    font-weight: bold;
     text-align: center;
     align-self: center;
     align-items: center;
     font-size: 1rem;
-    color: #ffc107;
+    color: burlywood;
 }
 
 a:link {
